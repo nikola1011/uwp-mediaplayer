@@ -1,0 +1,32 @@
+﻿<Application
+    x:Class="UWP_HelloWorld_NewYear.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWP_HelloWorld_NewYear">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    
+                    <SolidColorBrush x:Key="BackgroundColor" Color="#1E212A" />
+                    <SolidColorBrush x:Key="ForegroundColor" Color="#BBBCBF" />
+                    
+                    <!--<LinearGradientBrush x:Key="HeaderPlayerButtonsShadow" StartPoint="0.0, 0.5" EndPoint="1.0,0.5" >
+                        <GradientStop Offset="0.0" Color="Transparent" />
+                        <GradientStop Offset="0.5" Color="Black" />
+                        <GradientStop Offset="1.0" Color="Black" />
+                    </LinearGradientBrush>-->
+
+                    <x:Int32 x:Key="ThumbnailImageHeight">100</x:Int32>
+                    <x:Int32 x:Key="ThumbnailImageWidth">100</x:Int32>
+                    
+                    <!--<Storyboard x:Key="AnimateStackPanel">
+                        <DoubleAnimation  Storyboard.TargetProperty="Opacity" From="0.0" To="0.75" Duration="0:0:0.45" />
+                    </Storyboard>-->
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+
+</Application>

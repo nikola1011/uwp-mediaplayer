@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="UWP_HelloWorld_NewYear.PlayerPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWP_HelloWorld_NewYear"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#1E212A">
+
+    <Page.Resources>
+        <SolidColorBrush x:Key="BackgroundColor" Color="#1E212A" />
+
+        <Storyboard x:Name="StoryboardFadeOut">
+            <DoubleAnimation
+                Storyboard.TargetName="OpacityAnimatedStackPanel"
+                Storyboard.TargetProperty="Opacity"
+                From="1.0" To="0.0" Duration="0:0:0.6"/>
+        </Storyboard>
+
+        <Storyboard x:Name="StoryboardFadeIn">
+            <DoubleAnimation
+                Storyboard.TargetName="OpacityAnimatedStackPanel"
+                Storyboard.TargetProperty="Opacity"
+                From="0.0" To="1.0" Duration="0:0:0.6"/>
+        </Storyboard>
+
+    </Page.Resources>
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="200" />
+        </Grid.ColumnDefinitions>
+
+        <MediaPlayerElement x:Name="MediaPlayer" 
+                            Grid.ColumnSpan="2"
+                            AutoPlay="False"
+                            Stretch="Uniform"
+                            AreTransportControlsEnabled="True"/>
+
+        <!--Source="ms-appx:///Assets/Videos/augmented-images-demo.mp4"-->
+
+        <StackPanel Name="OpacityAnimatedStackPanel"  Grid.Column="1" 
+                    Width="200" VerticalAlignment="Top" Padding="10" Margin="0,40,0,0" >
+            <!-- Background="{StaticResource HeaderPlayerButtonsShadow}" -->
+            <Button Name="BrowseFileButton" Content="Browse another file" Height="40"  Style="{StaticResource ButtonRevealStyle}" Margin="10,10,0,10" />
+            <Button Name="BackToContentPageButton" Content="Back to content page" Height="40"  Style="{StaticResource ButtonRevealStyle}" Margin="10,0,0,0"/>
+        </StackPanel>
+
+
+
+    </Grid>
+</Page>
